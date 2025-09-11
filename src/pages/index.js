@@ -55,7 +55,7 @@ export default function Home() {
 
           {/* 사이트 B */}
           <div className="col col--3">
-            <Link to="https://ylee-catenoid.github.io/vod-guide/" className={styles.cardLink}>
+            <Link to="https://cylee-catenoid.github.io/vod-guide/" className={styles.cardLink}>
               <div className={`card ${styles.card}`}>
                 <div className="card__header">
                   <h3 className={styles.cardTitle}>Kollus VOD 사용자 가이드</h3>
@@ -68,7 +68,7 @@ export default function Home() {
 
           {/* 사이트 C */}
           <div className="col col--3">
-            <Link to="https://ylee-catenoid.github.io/developer/" className={styles.cardLink}>
+            <Link to="https://cylee-catenoid.github.io/developer/" className={styles.cardLink}>
               <div className={`card ${styles.card}`}>
                 <div className="card__header">
                   <h3 className={styles.cardTitle}>Kollus 개발자 센터</h3>

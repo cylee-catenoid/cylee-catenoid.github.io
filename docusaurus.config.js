@@ -27,7 +27,7 @@ const config = {
 
   themeConfig: {
     navbar: {
-      title: 'Kollus 가이드 센터',
+      title: 'Kollus 서포트 센터',
       items: [
         // 허브에 docs 플러그인을 안 쓰면 404 나므로 잠시 주석/삭제 권장
         // { to: '/docs/intro', label: '문서', position: 'left' },

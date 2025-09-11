@@ -31,11 +31,10 @@ import styles from './index.module.css';
 export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
-    <Layout title="Kollus 가이드 센터" description="개발 문서 허브">
+    <Layout title="Kollus 서포트 센터" description="문서 허브">
       <header className={styles.heroBanner}>
         <div className="container">
-          <h1 className={styles.heroTitle}>Kollus 가이드 센터</h1>
-          <p className={styles.heroSubtitle}>아래 카드로 각 사이트로 이동하세요</p>
+          <h1 className={styles.heroTitle}>Kollus 서포트 센터</h1>
         </div>
       </header>
 

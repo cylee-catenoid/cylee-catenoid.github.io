@@ -15,7 +15,7 @@ const config = {
   title: 'Guide Hub',
   url: 'https://cylee-catenoid.github.io', // 허브 자체 도메인
   baseUrl: '/',                                   // 루트
-  organizationName: '<cylee-catenoid',
+  organizationName: 'cylee-catenoid',
   projectName: 'cylee-catenoid.github.io',  // 리포 이름 그대로
   trailingSlash: false,
   deploymentBranch: 'gh-pages',

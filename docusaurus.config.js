@@ -1,30 +1,37 @@
-// @ts-check
-// `@type` JSDoc annotations allow editor autocompletion and type checking
-// (when paired with `@ts-check`).
-// There are various equivalent ways to declare your Docusaurus config.
-// See: https://docusaurus.io/docs/api/docusaurus-config
-
+// docusaurus.config.js
 import {themes as prismThemes} from 'prism-react-renderer';
 
-// This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
-
 /** @type {import('@docusaurus/types').Config} */
-
-// docusaurus.config.js
 const config = {
   title: 'Guide Hub',
-  url: 'https://cylee-catenoid.github.io', // 허브 자체 도메인
-  baseUrl: '/',                                   // 루트
+  url: 'https://cylee-catenoid.github.io', // 허브 도메인
+  baseUrl: '/',                             // 루트
   organizationName: 'cylee-catenoid',
   projectName: 'cylee-catenoid.github.io',  // 리포 이름 그대로
   trailingSlash: false,
   deploymentBranch: 'gh-pages',
 
+  // ✅ classic 프리셋 추가 (custom.css 로드)
+  presets: [
+    [
+      'classic',
+      {
+        docs: false, // 허브는 문서 플러그인 비활성화(원하면 true로 바꾸고 docs 폴더 준비)
+        blog: false,
+        theme: {
+          customCss: require.resolve('./src/css/custom.css'),
+        },
+      },
+    ],
+  ],
+
   themeConfig: {
     navbar: {
-      title: 'Kollus 개발자 센터',
+      title: 'Kollus 가이드 센터',
       items: [
-        { to: '/docs/intro', label: '문서', position: 'left' }, // 필요하면 유지/삭제
+        // 허브에 docs 플러그인을 안 쓰면 404 나므로 잠시 주석/삭제 권장
+        // { to: '/docs/intro', label: '문서', position: 'left' },
+
         {
           type: 'html',
           position: 'right',
@@ -36,6 +43,13 @@ const config = {
         },
       ],
     },
-  }
+
+    // (선택) 코드 하이라이트 테마
+    prism: {
+      theme: prismThemes.github,
+      darkTheme: prismThemes.dracula,
+    },
+  },
 };
-module.exports = config;
+
+export default config;

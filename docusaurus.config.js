@@ -11,6 +11,10 @@ const config = {
   trailingSlash: false,
   deploymentBranch: 'gh-pages',
 
+  title: '카테노이드 서포트 센터',
+  tagline: '카테노이드 서포트 센터',
+  favicon: 'img/icon.ico',
+
   // ✅ classic 프리셋 추가 (custom.css 로드)
   presets: [
     [
@@ -27,7 +31,11 @@ const config = {
 
   themeConfig: {
     navbar: {
-      title: 'Kollus 서포트 센터',
+      title: '카테노이드 서포트 센터',
+      logo: {
+        alt: '',
+        src: 'img/icon.ico',
+      },
       items: [
         // 허브에 docs 플러그인을 안 쓰면 404 나므로 잠시 주석/삭제 권장
         // { to: '/docs/intro', label: '문서', position: 'left' },

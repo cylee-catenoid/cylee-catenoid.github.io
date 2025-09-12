@@ -2,13 +2,14 @@
   background: var(--ifm-background-color);
   color: var(--ifm-font-color-base);
   text-align: center;
-  padding: 4rem 0 2rem;
+  padding: 4rem 0 4rem;
 }
 
 .heroTitle {
   font-size: 2rem;
   font-weight: 800;
   margin: 0;
+  text-align: center;
 }
 
 .heroSubtitle {
@@ -17,29 +18,72 @@
   opacity: 0.9;
 }
 
+/* ====== GRID ====== */
+.grid {
+  display: grid;
+  gap: 24px;
+  /* 2열(작은 카드) + 1열(큰 카드) */
+  grid-template-columns: 1fr 1fr 1.1fr;
+  grid-template-rows: repeat(3, minmax(120px, 1fr));
+  grid-template-areas:
+    "a1 a2 big"
+    "a3 a4 big"
+    "a5 a6 big";
+  align-items: stretch;
+}
+
+/* 영역 배치 */
+.a1 { grid-area: a1; }
+.a2 { grid-area: a2; }
+.a3 { grid-area: a3; }
+.a4 { grid-area: a4; }
+.a5 { grid-area: a5; }
+.a6 { grid-area: a6; }
+.cardBig {
+  grid-area: big;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* 위쪽 정렬 */
+  padding: 32px;
+}
+
+.cardContent {
+  text-align: center;
+  width: 100%;
+}
+
 .cardRow {
   margin: 2rem auto 4rem;
 }
 
+/* ====== CARD ====== */
 .card {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;       /* 가로축 가운데 정렬 */
-  text-align: center;        /* 텍스트 가운데 정렬 */
-  border-radius: 0.75rem;
-  background: #e9ddf3;       /* 옅은 라벤더 배경 */
-  color: var(--ifm-font-color-base);
-  box-shadow: var(--ifm-global-shadow-lw);
-  transition: transform .12s ease, box-shadow .12s ease;
-  cursor: pointer;
-  padding: 1.5rem;           /* 안쪽 여백 추가 */
+  display: flex;                 /* flex 레이아웃으로 변경 */
+  flex-direction: column;        /* 세로 방향 */
+  align-items: center;           /* 가로 가운데 */
+  justify-content: center;       /* 세로 가운데 */
+  padding: 24px;
+  border-radius: 20px;
+  text-decoration: none;
+  background: #f2eef8;              
+  color: inherit;
+  border: 1px solid transparent;
+  box-shadow: 0 1px 2px rgba(0,0,0,.06);
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease, background-color .18s ease;
 }
 
 .card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(52, 152, 219, 0.25);
+  box-shadow: 0 8px 20px rgba(0,0,0,.08);
+  border-color: #7648a3;
+  background: #ece3f6; 
 }
+
+/* 타이포 */
+.cardTitle   { font-weight: 700; font-size: 20px; line-height: 1.25; margin-bottom: 4px; text-align: center; }
+.cardSubtitle{ font-size: 18px; opacity: .85; text-align: center; }
+
 
 .cardIcon {
   display: inline-flex;
@@ -71,10 +115,27 @@
   padding-bottom: 1.25rem;
 }
 
-.cardLink {
-  text-decoration: none; /* 밑줄 제거 */
-  color: inherit; /* 카드 안의 글자색 유지 */
-  display: block; /* 블록화해서 카드 전체 클릭 가능 */
+.cardLinks {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.cardLinks li {
+  margin: 1rem 0;
+}
+
+.cardLinks a {
+  color: var(--ifm-color-primary);
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.cardLinks a:hover {
+  color: #7648a3;
+  text-decoration: underline;
 }
 
 /* 검색창 모양 */

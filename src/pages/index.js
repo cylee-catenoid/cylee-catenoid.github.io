@@ -31,52 +31,117 @@ import styles from './index.module.css';
 export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
-    <Layout title="Kollus 서포트 센터" description="문서 허브">
+    <Layout title="카테노이드 서포트 센터" description="문서 허브">
       <header className={styles.heroBanner}>
         <div className="container">
-          <h1 className={styles.heroTitle}>Kollus 서포트 센터</h1>
+          <h1 className={styles.heroTitle}>카테노이드 서포트 센터</h1>
         </div>
       </header>
 
       <main className="container">
-        <div className={`row ${styles.cardRow}`}>
-          {/* 사이트 A */}
-          <div className="col col--4">
-            <Link to="https://cylee-catenoid.github.io/player-guide/" className={styles.cardLink}>
-              <div className={`card ${styles.card}`}>
-                <div className="card__header">
-                  <h3 className={styles.cardTitle}>Kollus Player 사용자 가이드</h3>
-                </div>
-                <div className="card__body">
-                </div>
-              </div>
-            </Link>
+        <div className={styles.grid}>
+          {/* 왼쪽 2열 × 3행 작은 카드들 */}
+          <div className={`${styles.card} ${styles.a1}`}>
+            <div className={styles.cardTitle}>Kollus Player</div>
+
+            <ul className={styles.cardLinks}>
+              <li>
+                <Link to="https://cylee-catenoid.github.io/player-guide/">
+                  사용자 가이드
+                </Link>
+              </li>
+            </ul>
           </div>
 
-          {/* 사이트 B */}
-          <div className="col col--4">
-            <Link to="https://cylee-catenoid.github.io/vod-guide/" className={styles.cardLink}>
-              <div className={`card ${styles.card}`}>
-                <div className="card__header">
-                  <h3 className={styles.cardTitle}>Kollus VOD 사용자 가이드</h3>
-                </div>
-                <div className="card__body">
-                </div>
-              </div>
-            </Link>
+          <div className={`${styles.card} ${styles.a2}`}>
+            <div className={styles.cardTitle}>Kollus VOD</div>
+
+            <ul className={styles.cardLinks}>
+              <li>
+                <Link to="https://cylee-catenoid.github.io/vod-guide/">
+                  사용자 가이드
+                </Link>
+              </li>
+            </ul>
           </div>
 
-          {/* 사이트 C */}
-          <div className="col col--4">
-            <Link to="https://cylee-catenoid.github.io/developer/" className={styles.cardLink}>
-              <div className={`card ${styles.card}`}>
-                <div className="card__header">
-                  <h3 className={styles.cardTitle}>Kollus 개발자 센터</h3>
-                </div>
-                <div className="card__body">
-                </div>
-              </div>
-            </Link>
+          {/* TODO: 실제 URL로 교체 */}
+          <div className={`${styles.card} ${styles.a3}`}>
+            <div className={styles.cardTitle}>Kollus Live</div>
+            <ul className={styles.cardLinks}>
+              <li>
+                <Link to="https://cylee-catenoid.github.io/vod-guide/">
+                  사용자 가이드
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* TODO: 실제 URL로 교체 */}
+          <div className={`${styles.card} ${styles.a4}`}>
+            <div className={styles.cardTitle}>Kollus Live Commerce</div>
+
+            <ul className={styles.cardLinks}>
+              <li>
+                <Link to="https://cylee-catenoid.github.io/vod-guide/">
+                  사용자 가이드
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* TODO: 실제 URL로 교체 */}
+          <div className={`${styles.card} ${styles.a5}`}>
+            <div className={styles.cardTitle}>Loomex</div>
+            
+            <ul className={styles.cardLinks}>
+              <li>
+                <Link to="https://cylee-catenoid.github.io/vod-guide/">
+                  사용자 가이드
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* TODO: 실제 URL로 교체 */}
+          <div className={`${styles.card} ${styles.a6}`}>
+            <div className={styles.cardTitle}>Charlla</div>
+
+            <ul className={styles.cardLinks}>
+              <li>
+                <Link to="https://cylee-catenoid.github.io/vod-guide/">
+                  사용자 가이드
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* 오른쪽 큰 카드 (세로로 길게) */}
+          <div className={`${styles.card} ${styles.cardBig}`}>
+            <div className={styles.cardTitle}>Kollus 개발자 센터</div>
+
+            <ul className={styles.cardLinks}>
+              <li>
+                <Link to="https://cylee-catenoid.github.io/developer">
+                  개발 가이드
+                </Link>
+              </li>
+              <li>
+                <Link to="https://cylee-catenoid.github.io/developer/api">
+                  API 레퍼런스
+                </Link>
+              </li>
+              <li>
+                <Link to="https://cylee-catenoid.github.io/developer/sdk">
+                  모바일 SDK
+                </Link>
+              </li>
+              <li>
+                <Link to="https://cylee-catenoid.github.io/developer/demo-player">
+                  데모 Player
+                </Link>
+              </li>
+            </ul>
           </div>
         </div>
       </main>

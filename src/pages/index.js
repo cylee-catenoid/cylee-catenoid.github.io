@@ -50,6 +50,11 @@ export default function Home() {
                   사용자 가이드
                 </Link>
               </li>
+              <li>
+                <Link to="https://cylee-catenoid.github.io/player-guide/faq">
+                  자주 묻는 질문
+                </Link>
+              </li>
             </ul>
           </div>
 

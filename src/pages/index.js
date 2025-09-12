@@ -41,7 +41,7 @@ export default function Home() {
       <main className="container">
         <div className={`row ${styles.cardRow}`}>
           {/* 사이트 A */}
-          <div className="col col--3">
+          <div className="col col--4">
             <Link to="https://cylee-catenoid.github.io/player-guide/" className={styles.cardLink}>
               <div className={`card ${styles.card}`}>
                 <div className="card__header">
@@ -54,7 +54,7 @@ export default function Home() {
           </div>
 
           {/* 사이트 B */}
-          <div className="col col--3">
+          <div className="col col--4">
             <Link to="https://cylee-catenoid.github.io/vod-guide/" className={styles.cardLink}>
               <div className={`card ${styles.card}`}>
                 <div className="card__header">
@@ -67,7 +67,7 @@ export default function Home() {
           </div>
 
           {/* 사이트 C */}
-          <div className="col col--3">
+          <div className="col col--4">
             <Link to="https://cylee-catenoid.github.io/developer/" className={styles.cardLink}>
               <div className={`card ${styles.card}`}>
                 <div className="card__header">

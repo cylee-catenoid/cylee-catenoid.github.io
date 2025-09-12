@@ -28,7 +28,7 @@
   align-items: center;       /* 가로축 가운데 정렬 */
   text-align: center;        /* 텍스트 가운데 정렬 */
   border-radius: 0.75rem;
-  background: #eaf4fb;       /* 옅은 블루 배경 */
+  background: #e9ddf3;       /* 옅은 라벤더 배경 */
   color: var(--ifm-font-color-base);
   box-shadow: var(--ifm-global-shadow-lw);
   transition: transform .12s ease, box-shadow .12s ease;

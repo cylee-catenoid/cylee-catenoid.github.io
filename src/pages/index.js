@@ -122,7 +122,7 @@ export default function Home() {
 
             <ul className={styles.cardLinks}>
               <li>
-                <Link to="https://cylee-catenoid.github.io/developer/docs">
+                <Link to="https://cylee-catenoid.github.io/developer/docs/intro">
                   개발 가이드
                 </Link>
               </li>

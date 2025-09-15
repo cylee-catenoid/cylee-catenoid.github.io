@@ -149,3 +149,46 @@
 .navbar__search:focus { border-color:#3498db; box-shadow:0 0 0 2px rgba(52,152,219,.25); }
 [data-theme='dark'] .navbar__search { background:#111; color:#fff; border-color:#444; }
 [data-theme='dark'] .navbar__search:focus { box-shadow:0 0 0 2px rgba(52,152,219,.35); }
+
+/* ===== 다크 모드 ===== */
+[data-theme='dark'] .heroBanner {
+  background: var(--ifm-background-color);
+  color: var(--ifm-font-color-base);
+}
+
+[data-theme='dark'] .card {
+  background: #1e1e2f;       /* 다크 배경 톤 */
+  color: #f5f5f5;            /* 밝은 텍스트 */
+  border-color: #333;
+  box-shadow: 0 1px 3px rgba(0,0,0,.5);
+}
+
+[data-theme='dark'] .card:hover {
+  background: #2a2a3d;       /* hover 시 살짝 밝은 톤 */
+  border-color: #9b7ad1;     /* 브랜드 컬러 보라(#7648a3) 밝게 */
+  box-shadow: 0 4px 12px rgba(0,0,0,.6);
+}
+
+[data-theme='dark'] .cardLinks a {
+  color: #c7b5ec;            /* 보라 톤 링크 */
+}
+
+[data-theme='dark'] .cardLinks a:hover {
+  color: #e0d4fa;
+  text-decoration: underline;
+}
+
+[data-theme='dark'] .navbar__search {
+  background: #1e1e2f;         /* 카드와 어울리는 어두운 배경 */
+  color: #f5f5f5;              /* 텍스트 흰색 계열 */
+  border-color: #333;          /* 어두운 보더 */
+}
+
+[data-theme='dark'] .navbar__search::placeholder {
+  color: #aaa;                 /* placeholder는 중간 회색 */
+}
+
+[data-theme='dark'] .navbar__search:focus {
+  border-color: #9b7ad1;       /* 브랜드 보라색 강조 */
+  box-shadow: 0 0 0 2px rgba(155,122,209,.35);
+}

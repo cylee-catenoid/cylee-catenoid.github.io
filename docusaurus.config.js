@@ -31,7 +31,7 @@ const config = {
 
   themeConfig: {
     navbar: {
-      title: '카테노이드 서포트 센터',
+      title: '서포트 센터',
       logo: {
         alt: '',
         src: 'img/icon.ico',

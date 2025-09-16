@@ -1,63 +1,53 @@
-import clsx from 'clsx';
-import Heading from '@theme/Heading';
+import Link from '@docusaurus/Link';
 import styles from './styles.module.css';
 
-const FeatureList = [
+const products = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
-    description: (
-      <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
-      </>
-    ),
+    title: 'Kollus VOD',
+    links: [
+      {label: '서비스 가이드', href: 'https://cylee-catenoid.github.io/guide/kollus-vod/intro'},
+      {label: '개발자 센터', href: 'https://cylee-catenoid.github.io/developer'},
+    ],
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
-    description: (
-      <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
-      </>
-    ),
+    title: 'Kollus Live',
+    links: [
+      {label: '서비스 가이드', href: 'https://cylee-catenoid.github.io/guide/kollus-live/intro'},
+      {label: '개발자 센터', href: 'https://cylee-catenoid.github.io/developer'},
+    ],
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
-    description: (
-      <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
-      </>
-    ),
+    title: 'Kollus Live Commerce',
+    links: [
+      {label: '서비스 가이드', href: 'https://cylee-catenoid.github.io/guide/home'},
+    ],
+  },
+  {
+    title: 'Loomex',
+    links: [{label: '서비스 가이드', href: 'https://cylee-catenoid.github.io/guide/home'}],
+  },
+  {
+    title: 'Charlla',
+    links: [{label: '서비스 가이드', href: 'https://cylee-catenoid.github.io/guide/home'}],
   },
 ];
 
-function Feature({Svg, title, description}) {
-  return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
-      </div>
-      <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
-      </div>
-    </div>
-  );
-}
-
 export default function HomepageFeatures() {
   return (
-    <section className={styles.features}>
-      <div className="container">
-        <div className="row">
-          {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
-          ))}
-        </div>
+    <section className={styles.wrapper}>
+      <div className={styles.grid}>
+        {products.map((p) => (
+          <div key={p.title} className={styles.card}>
+            <h3 className={styles.title}>{p.title}</h3>
+            <div className={styles.links}>
+              {p.links.map((l) => (
+                <Link key={l.href} className={styles.link} to={l.href}>
+                  {l.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );
